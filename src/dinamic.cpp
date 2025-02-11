@@ -80,18 +80,17 @@ void Dinamic::init_Dinamico() {
     
     std::vector<std::vector<int>> dp(1 << V, std::vector<int>(V, -1));
     std::vector<std::vector<int>> parent(1 << V, std::vector<int>(V, -1));
-    tsp(1, 0, dist, dp, parent, V);
-    //int custoMinimo = tsp(1, 0, dist, dp, parent, V);
-    //std::vector<int> path = getPath(parent);
+    
+    int custoMinimo = tsp(1, 0, dist, dp, parent, V);
+    std::vector<int> path = getPath(parent);
     
     // Printa o menor custo
-    //std::cout << custoMinimo << std::endl;
+    std::cout << custoMinimo << std::endl;
     // Printa o caminho
-    /*
     for (size_t i = 0; i < path.size()-1; i++) {
         std::cout << cityIndex[path[i]];
         if (i < path.size() - 2) std::cout << " ";
-    }*/
+    }
     std::cout << std::endl;
     
 }
