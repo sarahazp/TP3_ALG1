@@ -74,15 +74,14 @@ void Brute::init_Brute() {
         grafo[c1][c2] = tam;
         grafo[c2][c1] = tam;
     }
-    forcaBrutaTSP(grafo);
 
-    //auto [rotaOtima, custoMinimo] = forcaBrutaTSP(grafo);
-/*
+    auto [rotaOtima, custoMinimo] = forcaBrutaTSP(grafo);
+
     std::cout << custoMinimo << std::endl;
     for (size_t i = 0; i < rotaOtima.size(); i++) {
         std::cout << rotaOtima[i];
         if (i < rotaOtima.size() - 1) std::cout << " ";
-    }*/
+    }
     std::cout << std::endl;
     
 }
