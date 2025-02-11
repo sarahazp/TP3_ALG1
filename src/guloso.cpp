@@ -77,12 +77,12 @@ void Greedy::init_Greedy(){
         dist.push_back(dis);
     }
 
-	greedy_tsp(dist, V);
-    /*
+    std::vector<int> path = greedy_tsp(dist, V);
+    
     for (int i = 0; i < int(path.size() - 1); ++i) {
         std::cout << cityIndex[path[i]];
         if (i < int(path.size() - 2)) std::cout << " ";
     }
     std::cout << std::endl;
-  */
+  
 }
